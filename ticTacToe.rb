@@ -92,6 +92,14 @@ class Game
     player_marker = gets.chomp
   end
 
+  def declare_winner
+    if is_there_a_winner?(player1, player2)
+      puts "The winner is #{winner.name}!"
+    else
+      puts "It's a draw!"
+    end
+  end
+
   def play_game
     player_turn = 1
     display_board
@@ -125,11 +133,8 @@ class Game
       self.remaining_moves -= 1
     end
     
-    if is_there_a_winner?(player1, player2)
-      puts "The winner is #{winner.name}!"
-    else
-      puts "It's a draw!"
-    end
+    declare_winner
+    
   end
 
 
