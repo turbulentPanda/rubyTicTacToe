@@ -5,8 +5,7 @@ class Player
     @name = name
     @marker = marker
   end
-
-
+  
 end
 
 class Game
@@ -100,6 +99,8 @@ class Game
     end
   end
 
+
+
   def play_game
     player_turn = 1
     display_board
@@ -129,7 +130,6 @@ class Game
         player_turn = 1
       end
       display_board
-      p winning_positions
       self.remaining_moves -= 1
     end
     
